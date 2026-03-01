@@ -4,26 +4,114 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>配信中 | えぶメディ clone</title>
+    <meta name="description" content="現在配信中の配信者をリアルタイム風に表示。視聴者数と次回配信スケジュールをまとめて確認できます。" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <header class="header">
-      <div class="header-inner container">
-        <a class="logo" href="./index.html">えぶメディ clone</a>
-        <nav class="gnav" aria-label="グローバルナビゲーション">
-          <a class="nav-link" href="./index.html">ランキング</a>
-          <a class="nav-link" href="./list.html">一覧</a>
-          <a class="nav-link active" href="./live.html">配信中</a>
-          <a class="nav-link" href="./news.html">お知らせ</a>
-        </nav>
-      </div>
-    </header>
-    <main class="container main-content simple-page">
-      <div class="breadcrumbs">TOP &gt; 配信中</div>
-      <section class="box-white">
-        <h1 class="title-page">現在配信中</h1>
-        <p class="lead">このページは遷移確認用の配信中ページです。次段階でライブステータスAPIと接続可能です。</p>
-      </section>
-    </main>
+    <div class="app-shell">
+      <header class="header">
+        <div class="header-inner container">
+          <a class="logo" href="./index.html">えぶメディ clone</a>
+          <nav class="gnav" aria-label="グローバルナビゲーション">
+            <a class="nav-link" href="./index.html">ランキング</a>
+            <a class="nav-link" href="./list.html">一覧</a>
+            <a class="nav-link active" href="./live.html">配信中</a>
+            <a class="nav-link" href="./news.html">お知らせ</a>
+          </nav>
+        </div>
+      </header>
+
+      <main class="container main-content live-page">
+        <div class="breadcrumbs">TOP &gt; 配信中</div>
+
+        <section class="first-view box-white">
+          <h1 class="title-page">現在配信中</h1>
+          <p class="lead">いま放送中の人気配信をチェック。視聴者数の多い順に表示しています。</p>
+        </section>
+
+        <div class="live-layout">
+          <section class="box-white">
+            <div class="section-head">
+              <h2 class="title-ranking">ライブ配信一覧</h2>
+              <p class="count">最終更新 23:00</p>
+            </div>
+
+            <div class="live-grid">
+              <article class="live-card">
+                <div class="live-thumb">AO</div>
+                <div class="live-body">
+                  <div class="live-meta-row"><span class="live-badge">LIVE</span><span class="viewer-count">👁️ 12,480</span></div>
+                  <h3 class="card-name">蒼乃しえる「週末ゆる雑談」</h3>
+                  <p class="belong">ミルキープロ</p>
+                </div>
+              </article>
+              <article class="live-card">
+                <div class="live-thumb">MA</div>
+                <div class="live-body">
+                  <div class="live-meta-row"><span class="live-badge">LIVE</span><span class="viewer-count">👁️ 10,932</span></div>
+                  <h3 class="card-name">真白えま「睡眠導入ASMR」</h3>
+                  <p class="belong">LumiLive</p>
+                </div>
+              </article>
+              <article class="live-card">
+                <div class="live-thumb">SU</div>
+                <div class="live-body">
+                  <div class="live-meta-row"><span class="live-badge">LIVE</span><span class="viewer-count">👁️ 8,741</span></div>
+                  <h3 class="card-name">鈴代ねね「ランクマ耐久」</h3>
+                  <p class="belong">ミルキープロ</p>
+                </div>
+              </article>
+              <article class="live-card">
+                <div class="live-thumb">RE</div>
+                <div class="live-body">
+                  <div class="live-meta-row"><span class="live-badge">LIVE</span><span class="viewer-count">👁️ 7,508</span></div>
+                  <h3 class="card-name">玲音ゆら「アニソン縛り歌枠」</h3>
+                  <p class="belong">LumiLive</p>
+                </div>
+              </article>
+              <article class="live-card">
+                <div class="live-thumb">MI</div>
+                <div class="live-body">
+                  <div class="live-meta-row"><span class="live-badge">LIVE</span><span class="viewer-count">👁️ 6,444</span></div>
+                  <h3 class="card-name">美澄れい「新作ホラゲ実況」</h3>
+                  <p class="belong">個人勢</p>
+                </div>
+              </article>
+              <article class="live-card">
+                <div class="live-thumb">NO</div>
+                <div class="live-body">
+                  <div class="live-meta-row"><span class="live-badge">LIVE</span><span class="viewer-count">👁️ 5,931</span></div>
+                  <h3 class="card-name">乃愛ゆに「朝活振り返り」</h3>
+                  <p class="belong">LumiLive</p>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <aside class="box-white schedule-box" aria-label="配信スケジュール">
+            <h2 class="title-ranking">このあとの予定</h2>
+            <ul class="schedule-list">
+              <li><span class="time">23:30</span><span class="sch-text">花音いおり｜耳かきASMR</span></li>
+              <li><span class="time">00:00</span><span class="sch-text">時雨とうか｜深夜雑談</span></li>
+              <li><span class="time">00:30</span><span class="sch-text">結城るる｜おやすみ弾き語り</span></li>
+              <li><span class="time">01:00</span><span class="sch-text">凛月みお｜深夜ランク</span></li>
+            </ul>
+            <a class="schedule-link" href="./list.html">一覧ページで配信者を探す →</a>
+          </aside>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container footer-inner">
+          <p>Clone UI for design/reference purpose only.</p>
+        </div>
+      </footer>
+    </div>
   </body>
 </html>

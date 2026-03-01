@@ -4,26 +4,89 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>お知らせ | えぶメディ clone</title>
+    <meta name="description" content="ランキング更新情報・障害情報・キャンペーン告知など、お知らせ一覧ページです。" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <header class="header">
-      <div class="header-inner container">
-        <a class="logo" href="./index.html">えぶメディ clone</a>
-        <nav class="gnav" aria-label="グローバルナビゲーション">
-          <a class="nav-link" href="./index.html">ランキング</a>
-          <a class="nav-link" href="./list.html">一覧</a>
-          <a class="nav-link" href="./live.html">配信中</a>
-          <a class="nav-link active" href="./news.html">お知らせ</a>
-        </nav>
-      </div>
-    </header>
-    <main class="container main-content simple-page">
-      <div class="breadcrumbs">TOP &gt; お知らせ</div>
-      <section class="box-white">
-        <h1 class="title-page">お知らせ</h1>
-        <p class="lead">このページは遷移確認用のお知らせページです。CMS連携で更新できるように拡張可能です。</p>
-      </section>
-    </main>
+    <div class="app-shell">
+      <header class="header">
+        <div class="header-inner container">
+          <a class="logo" href="./index.html">えぶメディ clone</a>
+          <nav class="gnav" aria-label="グローバルナビゲーション">
+            <a class="nav-link" href="./index.html">ランキング</a>
+            <a class="nav-link" href="./list.html">一覧</a>
+            <a class="nav-link" href="./live.html">配信中</a>
+            <a class="nav-link active" href="./news.html">お知らせ</a>
+          </nav>
+        </div>
+      </header>
+
+      <main class="container main-content news-page">
+        <div class="breadcrumbs">TOP &gt; お知らせ</div>
+
+        <section class="first-view box-white">
+          <h1 class="title-page">お知らせ</h1>
+          <p class="lead">サービス更新・メンテナンス・キャンペーンなどの最新情報を掲載しています。</p>
+        </section>
+
+        <section class="box-white news-list-wrap">
+          <h2 class="title-ranking">最新のお知らせ</h2>
+          <ul class="news-list">
+            <li class="news-item" id="news-20260301-ranking">
+              <div class="news-head">
+                <time datetime="2026-03-01">2026.03.01</time>
+                <span class="news-category cat-update">機能更新</span>
+              </div>
+              <h3 class="card-name">ランキング集計ロジックを更新しました</h3>
+              <p class="news-snippet">同接ランキングの集計タイミングを15分間隔に調整し、急上昇ランキングの反映速度を改善しました。</p>
+            </li>
+            <li class="news-item" id="news-20260227-maintenance">
+              <div class="news-head">
+                <time datetime="2026-02-27">2026.02.27</time>
+                <span class="news-category cat-maint">メンテナンス</span>
+              </div>
+              <h3 class="card-name">3/2(月) 02:00〜03:00 予定メンテナンスのお知らせ</h3>
+              <p class="news-snippet">データベース最適化のため、上記時間帯に一時的にランキング更新が遅延する可能性があります。</p>
+            </li>
+            <li class="news-item" id="news-20260220-campaign">
+              <div class="news-head">
+                <time datetime="2026-02-20">2026.02.20</time>
+                <span class="news-category cat-campaign">キャンペーン</span>
+              </div>
+              <h3 class="card-name">春の新規配信者ピックアップを開始</h3>
+              <p class="news-snippet">一覧ページ内で新規登録30日以内の配信者を優先表示する特集を開始しました。注目枠をぜひご覧ください。</p>
+            </li>
+            <li class="news-item" id="news-20260214-notice">
+              <div class="news-head">
+                <time datetime="2026-02-14">2026.02.14</time>
+                <span class="news-category cat-info">お知らせ</span>
+              </div>
+              <h3 class="card-name">お知らせページを新デザインに刷新しました</h3>
+              <p class="news-snippet">カテゴリバッジ、日付、要約表示を追加し、更新内容を見つけやすく改善しています。</p>
+            </li>
+            <li class="news-item" id="news-20260209-system">
+              <div class="news-head">
+                <time datetime="2026-02-09">2026.02.09</time>
+                <span class="news-category cat-maint">障害情報</span>
+              </div>
+              <h3 class="card-name">配信中ページの一部表示遅延は解消しました</h3>
+              <p class="news-snippet">21:40頃より発生していた配信中カードの読込遅延を22:15に解消しました。現在は正常にご利用いただけます。</p>
+            </li>
+          </ul>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div class="container footer-inner">
+          <p>Clone UI for design/reference purpose only.</p>
+        </div>
+      </footer>
+    </div>
   </body>
 </html>

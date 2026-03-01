@@ -4,26 +4,165 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>一覧 | えぶメディ clone</title>
+    <meta name="description" content="配信者一覧。事務所・カテゴリ・タグで絞り込みながら人気配信者を探せます。" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <header class="header">
-      <div class="header-inner container">
-        <a class="logo" href="./index.html">えぶメディ clone</a>
-        <nav class="gnav" aria-label="グローバルナビゲーション">
-          <a class="nav-link" href="./index.html">ランキング</a>
-          <a class="nav-link active" href="./list.html">一覧</a>
-          <a class="nav-link" href="./live.html">配信中</a>
-          <a class="nav-link" href="./news.html">お知らせ</a>
-        </nav>
-      </div>
-    </header>
-    <main class="container main-content simple-page">
-      <div class="breadcrumbs">TOP &gt; 一覧</div>
-      <section class="box-white">
-        <h1 class="title-page">配信者一覧</h1>
-        <p class="lead">このページは遷移確認用の一覧ページです。次段階で検索・絞り込みを追加できます。</p>
-      </section>
-    </main>
+    <div class="app-shell">
+      <header class="header">
+        <div class="header-inner container">
+          <a class="logo" href="./index.html">えぶメディ clone</a>
+          <nav class="gnav" aria-label="グローバルナビゲーション">
+            <a class="nav-link" href="./index.html">ランキング</a>
+            <a class="nav-link active" href="./list.html">一覧</a>
+            <a class="nav-link" href="./live.html">配信中</a>
+            <a class="nav-link" href="./news.html">お知らせ</a>
+          </nav>
+        </div>
+      </header>
+
+      <main class="container main-content list-page">
+        <div class="breadcrumbs">TOP &gt; 一覧</div>
+
+        <section class="first-view box-white">
+          <h1 class="title-page">配信者一覧</h1>
+          <p class="lead">条件を選んで、推しを見つけよう。人気配信者のサムネ・属性・配信傾向を一覧でチェックできます。</p>
+
+          <div class="filter-area" aria-label="一覧フィルター">
+            <div class="filter-row">
+              <span class="filter-label">カテゴリ</span>
+              <div class="chip-group">
+                <button class="chip chip-active" type="button">すべて</button>
+                <button class="chip" type="button">雑談</button>
+                <button class="chip" type="button">ASMR</button>
+                <button class="chip" type="button">ゲーム</button>
+                <button class="chip" type="button">歌配信</button>
+              </div>
+            </div>
+            <div class="filter-row">
+              <span class="filter-label">所属</span>
+              <div class="chip-group">
+                <button class="chip chip-active" type="button">すべて</button>
+                <button class="chip" type="button">ミルキープロ</button>
+                <button class="chip" type="button">LumiLive</button>
+                <button class="chip" type="button">個人勢</button>
+              </div>
+            </div>
+            <div class="search-like">🔎 キーワード検索（UIサンプル）: 名前 / タグ / 事務所</div>
+          </div>
+        </section>
+
+        <section class="box-white listing-section">
+          <div class="section-head">
+            <h2 class="title-ranking">表示中の配信者</h2>
+            <p class="count">全 24 件中 1-12件</p>
+          </div>
+
+          <div class="creator-grid">
+            <article class="creator-card">
+              <div class="creator-thumb">AO</div>
+              <div class="creator-meta"><span class="meta-pill">雑談</span><span class="meta-pill">ASMR</span></div>
+              <h3 class="card-name">蒼乃しえる</h3>
+              <p class="belong">ミルキープロ</p>
+              <p class="creator-stats">フォロワー 142,300 ・ 週間いいね 9,420</p>
+            </article>
+            <article class="creator-card">
+              <div class="creator-thumb">RI</div>
+              <div class="creator-meta"><span class="meta-pill">ゲーム</span><span class="meta-pill">深夜</span></div>
+              <h3 class="card-name">凛月みお</h3>
+              <p class="belong">LumiLive</p>
+              <p class="creator-stats">フォロワー 126,840 ・ 週間いいね 8,770</p>
+            </article>
+            <article class="creator-card">
+              <div class="creator-thumb">YU</div>
+              <div class="creator-meta"><span class="meta-pill">歌配信</span><span class="meta-pill">週末</span></div>
+              <h3 class="card-name">結城るる</h3>
+              <p class="belong">個人勢</p>
+              <p class="creator-stats">フォロワー 89,400 ・ 週間いいね 6,110</p>
+            </article>
+            <article class="creator-card">
+              <div class="creator-thumb">KA</div>
+              <div class="creator-meta"><span class="meta-pill">ASMR</span><span class="meta-pill">耳かき</span></div>
+              <h3 class="card-name">花音いおり</h3>
+              <p class="belong">ミルキープロ</p>
+              <p class="creator-stats">フォロワー 157,210 ・ 週間いいね 10,290</p>
+            </article>
+            <article class="creator-card">
+              <div class="creator-thumb">NO</div>
+              <div class="creator-meta"><span class="meta-pill">雑談</span><span class="meta-pill">朝活</span></div>
+              <h3 class="card-name">乃愛ゆに</h3>
+              <p class="belong">LumiLive</p>
+              <p class="creator-stats">フォロワー 71,930 ・ 週間いいね 4,905</p>
+            </article>
+            <article class="creator-card">
+              <div class="creator-thumb">MI</div>
+              <div class="creator-meta"><span class="meta-pill">ゲーム</span><span class="meta-pill">耐久</span></div>
+              <h3 class="card-name">美澄れい</h3>
+              <p class="belong">個人勢</p>
+              <p class="creator-stats">フォロワー 113,500 ・ 週間いいね 7,440</p>
+            </article>
+            <article class="creator-card">
+              <div class="creator-thumb">SA</div>
+              <div class="creator-meta"><span class="meta-pill">歌配信</span><span class="meta-pill">バラード</span></div>
+              <h3 class="card-name">紗奈みこ</h3>
+              <p class="belong">ミルキープロ</p>
+              <p class="creator-stats">フォロワー 97,050 ・ 週間いいね 6,980</p>
+            </article>
+            <article class="creator-card">
+              <div class="creator-thumb">TO</div>
+              <div class="creator-meta"><span class="meta-pill">雑談</span><span class="meta-pill">企画</span></div>
+              <h3 class="card-name">時雨とうか</h3>
+              <p class="belong">個人勢</p>
+              <p class="creator-stats">フォロワー 83,620 ・ 週間いいね 5,510</p>
+            </article>
+            <article class="creator-card">
+              <div class="creator-thumb">MA</div>
+              <div class="creator-meta"><span class="meta-pill">ASMR</span><span class="meta-pill">睡眠導入</span></div>
+              <h3 class="card-name">真白えま</h3>
+              <p class="belong">LumiLive</p>
+              <p class="creator-stats">フォロワー 165,420 ・ 週間いいね 11,220</p>
+            </article>
+            <article class="creator-card">
+              <div class="creator-thumb">SU</div>
+              <div class="creator-meta"><span class="meta-pill">ゲーム</span><span class="meta-pill">FPS</span></div>
+              <h3 class="card-name">鈴代ねね</h3>
+              <p class="belong">ミルキープロ</p>
+              <p class="creator-stats">フォロワー 122,040 ・ 週間いいね 8,010</p>
+            </article>
+            <article class="creator-card">
+              <div class="creator-thumb">HI</div>
+              <div class="creator-meta"><span class="meta-pill">雑談</span><span class="meta-pill">昼配信</span></div>
+              <h3 class="card-name">陽菜こよみ</h3>
+              <p class="belong">個人勢</p>
+              <p class="creator-stats">フォロワー 65,780 ・ 週間いいね 4,360</p>
+            </article>
+            <article class="creator-card">
+              <div class="creator-thumb">RE</div>
+              <div class="creator-meta"><span class="meta-pill">歌配信</span><span class="meta-pill">アニソン</span></div>
+              <h3 class="card-name">玲音ゆら</h3>
+              <p class="belong">LumiLive</p>
+              <p class="creator-stats">フォロワー 108,300 ・ 週間いいね 7,690</p>
+            </article>
+          </div>
+
+          <div class="load-more-wrap">
+            <button class="load-more" type="button">もっと見る</button>
+            <p class="muted-note">※ デモ実装のため、押下時の追加読込は未接続です。</p>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div class="container footer-inner">
+          <p>Clone UI for design/reference purpose only.</p>
+        </div>
+      </footer>
+    </div>
   </body>
 </html>
