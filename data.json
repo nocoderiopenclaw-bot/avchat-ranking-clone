@@ -23,6 +23,18 @@
     { "name": "桃瀬ユキ", "office": "個人勢", "count": 652 },
     { "name": "楓ほのか", "office": "ムネアツ", "count": 631 }
   ],
+  "healthy": [
+    { "name": "虹咲りり", "office": "個人勢", "count": 942 },
+    { "name": "天羽ねる", "office": "LumiLive", "count": 836 },
+    { "name": "桜乃こはる", "office": "個人勢", "count": 799 },
+    { "name": "星雲はるか", "office": "MoonPalette", "count": 741 },
+    { "name": "鈴森みるく", "office": "個人勢", "count": 703 },
+    { "name": "白峰あいり", "office": "LumiLive", "count": 668 },
+    { "name": "逢坂みなと", "office": "個人勢", "count": 629 },
+    { "name": "花瀬のあ", "office": "MoonPalette", "count": 601 },
+    { "name": "朝霧りず", "office": "個人勢", "count": 579 },
+    { "name": "涼風かなで", "office": "個人勢", "count": 552 }
+  ],
   "pv": [
     { "name": "神楽みあ", "office": "個人勢", "count": 342 },
     { "name": "天音かこ", "office": "DeepHolic", "count": 319 },

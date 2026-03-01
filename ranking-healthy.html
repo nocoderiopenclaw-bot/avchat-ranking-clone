@@ -3,14 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>同接ランキング(R18) | AVtuberランキング clone</title>
-    <meta name="description" content="AVtuberランキングの同接ランキング(R18)ページ。タブごとにページ遷移で閲覧できます。" />
+    <title>同接ランキング(健全) | AVtuberランキング clone</title>
+    <meta name="description" content="AVtuberランキングの同接ランキング(健全)ページ。タブごとにページ遷移で閲覧できます。" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="./styles.css" />
   </head>
-  <body data-ranking-type="live">
+  <body data-ranking-type="healthy">
     <div class="app-shell">
       <header class="header">
         <div class="header-inner container">
@@ -25,7 +25,7 @@
       </header>
 
       <main class="container main-content">
-        <div class="breadcrumbs"><a href="./index.html">TOP</a> &gt; AVtuberランキング &gt; 同接ランキング(R18)</div>
+        <div class="breadcrumbs"><a href="./index.html">TOP</a> &gt; AVtuberランキング &gt; 同接ランキング(健全)</div>
         <h1 class="title-page"><span class="t-pink">AV</span>tuberランキング</h1>
 
         <section class="tab-nav" aria-label="ランキング種別タブ">
@@ -33,11 +33,11 @@
             <h2 class="tab-label">ユーザーランキング</h2>
             <p class="tab-desc">当日含む週間のいいね数</p>
           </a>
-          <a class="tab-item is-active" href="./ranking-live.html">
+          <a class="tab-item" href="./ranking-live.html">
             <h2 class="tab-label">同接ランキング(R18)</h2>
             <p class="tab-desc">当日含む週間の平均同接数</p>
           </a>
-          <a class="tab-item" href="./ranking-healthy.html">
+          <a class="tab-item is-active" href="./ranking-healthy.html">
             <h2 class="tab-label">同接ランキング(健全)</h2>
             <p class="tab-desc">当日含む週間の平均同接数</p>
           </a>
@@ -50,16 +50,16 @@
         <div class="ranking-layout">
           <section class="ranking-panel">
             <div class="panel-head">
-              <h2 class="title-ranking">同接ランキング(R18)</h2>
+              <h2 class="title-ranking">同接ランキング(健全)</h2>
               <p class="ranking-desc">当日含む週間の平均同接数</p>
             </div>
-            <div class="rank-list" data-grid="live"></div>
+            <div class="rank-list" data-grid="healthy"></div>
           </section>
 
           <aside class="side-stack" aria-label="サイド情報">
-            <section class="ad-card"><small>STREAM</small><p>右カラムは参考サイトの視覚リズムに合わせて再現。</p></section>
-            <section class="ad-card"><small>RANKING</small><p>上位3位のみ特別カラーで強調。</p></section>
-            <section class="ad-card"><small>NAV</small><p>すべてのランキングタブはページ間の実URLで遷移。</p></section>
+            <section class="ad-card"><small>HEALTHY</small><p>R18版と同一フォーマットで比較しやすいUIに統一。</p></section>
+            <section class="ad-card"><small>CARD</small><p>行間・区切り線・タイポ階層を参考ページに寄せて調整。</p></section>
+            <section class="ad-card"><small>CHECK</small><p>ヘッダー/フッター/アクティブ状態は全ランキングページで共通。</p></section>
           </aside>
         </div>
       </main>

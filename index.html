@@ -4,16 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ユーザーランキング | AVtuberランキング clone</title>
-    <meta
-      name="description"
-      content="AVtuberランキングのユーザーランキングページ。人気・同接・急上昇をページ遷移で確認できます。"
-    />
+    <meta name="description" content="AVtuberランキングのユーザーランキングページ。タブごとにページ遷移で閲覧できます。" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body data-ranking-type="like">
@@ -31,24 +25,42 @@
       </header>
 
       <main class="container main-content">
-        <div class="breadcrumbs">TOP &gt; ランキング &gt; ユーザーランキング</div>
-        <section class="first-view box-white">
-          <h1 class="title-page"><span class="t-pink">AV</span>tuberランキング</h1>
-          <p class="lead">人気・同接・急上昇の3軸で、いま勢いのある配信者をチェック。</p>
+        <div class="breadcrumbs"><a href="./index.html">TOP</a> &gt; AVtuberランキング</div>
+        <h1 class="title-page"><span class="t-pink">AV</span>tuberランキング</h1>
 
-          <section class="anchor-tabs" aria-label="ランキング種別タブ">
-            <a class="anchor-tab is-active" href="./index.html">💗 ユーザーランキング</a>
-            <a class="anchor-tab" href="./ranking-live.html">👁️ 同接ランキング</a>
-            <a class="anchor-tab" href="./ranking-pv.html">🔥 急上昇ランキング</a>
-          </section>
+        <section class="tab-nav" aria-label="ランキング種別タブ">
+          <a class="tab-item is-active" href="./index.html">
+            <h2 class="tab-label">ユーザーランキング</h2>
+            <p class="tab-desc">当日含む週間のいいね数</p>
+          </a>
+          <a class="tab-item" href="./ranking-live.html">
+            <h2 class="tab-label">同接ランキング(R18)</h2>
+            <p class="tab-desc">当日含む週間の平均同接数</p>
+          </a>
+          <a class="tab-item" href="./ranking-healthy.html">
+            <h2 class="tab-label">同接ランキング(健全)</h2>
+            <p class="tab-desc">当日含む週間の平均同接数</p>
+          </a>
+          <a class="tab-item" href="./ranking-pv.html">
+            <h2 class="tab-label">急上昇ランキング</h2>
+            <p class="tab-desc">新規掲載AVtuberの閲覧数</p>
+          </a>
         </section>
 
-        <div class="ranking-main">
-          <section class="box-white ranking-section">
-            <h2 class="title-ranking">💗 ユーザーランキング</h2>
-            <p class="ranking-desc">当日含む週間のいいね数</p>
-            <div class="cards-grid" data-grid="like"></div>
+        <div class="ranking-layout">
+          <section class="ranking-panel">
+            <div class="panel-head">
+              <h2 class="title-ranking">ユーザーランキング</h2>
+              <p class="ranking-desc">当日含む週間のいいね数</p>
+            </div>
+            <div class="rank-list" data-grid="like"></div>
           </section>
+
+          <aside class="side-stack" aria-label="サイド情報">
+            <section class="ad-card"><small>Pick Up</small><p>ランキングの仕様は公式構成に寄せて再現したデモです。</p></section>
+            <section class="ad-card"><small>NEWS</small><p>タブ切替はアンカーではなく、実ページ遷移で実装。</p></section>
+            <section class="ad-card"><small>GUIDE</small><p>除外要素（診断機/今日のおみくじ/AVTuberタブ）は未配置です。</p></section>
+          </aside>
         </div>
       </main>
 
