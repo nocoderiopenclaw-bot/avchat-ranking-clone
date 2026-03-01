@@ -26,7 +26,7 @@ html, body {
 a { color: inherit; }
 
 .container {
-  width: min(1180px, 100% - 24px);
+  width: min(1200px, 100% - 26px);
   margin-inline: auto;
 }
 
@@ -34,13 +34,13 @@ a { color: inherit; }
   position: sticky;
   top: 0;
   z-index: 60;
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(255, 255, 255, 0.97);
   backdrop-filter: blur(8px);
-  border-bottom: 1px solid #edd4e2;
+  border-bottom: 1px solid #e9d3e0;
 }
 
 .header-inner {
-  min-height: 66px;
+  min-height: 67px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -58,33 +58,33 @@ a { color: inherit; }
 
 .nav-link {
   text-decoration: none;
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   font-weight: 700;
   color: #4f576b;
   border-radius: 999px;
-  padding: 7px 12px;
+  padding: 8px 13px;
 }
 
 .nav-link.active,
 .nav-link:hover { background: var(--pink-soft); color: var(--pink-dark); }
 
 .main-content {
-  padding: 12px 0 84px;
+  padding: 16px 0 84px;
 }
 
 .breadcrumbs {
   display: flex;
   align-items: center;
   gap: 6px;
-  margin-bottom: 10px;
-  font-size: 11px;
+  margin-bottom: 12px;
+  font-size: 12px;
   color: #77728a;
 }
 
 .title-page {
-  margin: 0;
-  font-size: clamp(1.36rem, 6.3vw, 1.72rem);
-  line-height: 1.28;
+  margin: 0 0 25.6px;
+  font-size: 25.6px;
+  line-height: 1.26;
   font-weight: 800;
 }
 
@@ -110,23 +110,24 @@ a { color: inherit; }
 
 /* Ranking */
 .tab-nav {
-  margin-top: 12px;
+  margin-top: 10px;
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 8px;
+  gap: 10px;
 }
 
 .tab-item {
   text-decoration: none;
-  border: 1px solid var(--line-strong);
+  border: 1px solid #d9dce5;
   border-radius: 10px;
   background: #fff;
-  min-height: 62px;
-  padding: 8px 10px;
+  min-height: 72px;
+  padding: 10px 11px;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.6) inset;
 }
 
-.tab-label { margin: 0; font-size: 12px; font-weight: 800; line-height: 1.35; }
-.tab-desc { margin: 4px 0 0; color: var(--muted); font-size: 10px; line-height: 1.4; }
+.tab-label { margin: 0; font-size: 13px; font-weight: 800; line-height: 1.35; }
+.tab-desc { margin: 4px 0 0; color: var(--muted); font-size: 11px; line-height: 1.4; }
 
 .tab-item.is-active {
   border-color: #ff8fc9;
@@ -136,45 +137,49 @@ a { color: inherit; }
 .ranking-layout {
   margin-top: 12px;
   display: grid;
-  gap: 10px;
+  gap: 12px;
   grid-template-columns: 1fr;
 }
 
 .ranking-panel {
   background: #fff;
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
+  border: 1px solid #d9dce5;
+  border-radius: 10px;
   overflow: clip;
 }
 
 .panel-head {
-  padding: 10px 12px;
-  border-bottom: 1px solid var(--line);
+  padding: 13px 14px;
+  border-bottom: 1px solid #e7e9ef;
 }
 
 .title-ranking { margin: 0; font-size: 14px; font-weight: 800; line-height: 1.35; }
 .ranking-desc { margin: 2px 0 0; font-size: 11px; color: var(--muted); }
 
+.panel-head .title-ranking { font-size: 24px; line-height: 1.2; }
+.panel-head .ranking-desc { font-size: 12px; }
+
 .rank-list { display: grid; }
 
 .rank-row {
   display: grid;
-  grid-template-columns: 34px 42px minmax(0, 1fr) auto;
+  grid-template-columns: 44px 64px minmax(0, 1fr) auto;
   align-items: center;
-  gap: 8px;
-  padding: 8px 10px;
-  border-top: 1px solid #f7eaf1;
+  gap: 10px;
+  padding: 13px 14px;
+  min-height: 88px;
+  border-top: 1px solid #eceef3;
 }
 
 .rank-row:first-child { border-top: 0; }
 
 .rank-no {
-  width: 24px;
-  height: 24px;
+  width: 32px;
+  height: 32px;
   border-radius: 999px;
   display: grid;
   place-items: center;
-  font-size: 11px;
+  font-size: 13px;
   font-weight: 800;
   background: #eff1f7;
   color: #5a6379;
@@ -184,12 +189,12 @@ a { color: inherit; }
 .rank-no.top3 { background: var(--rank-bronze); color: #7b471f; }
 
 .rank-avatar {
-  width: 40px;
-  height: 40px;
+  width: 52px;
+  height: 52px;
   border-radius: 50%;
   display: grid;
   place-items: center;
-  font-size: 11px;
+  font-size: 13px;
   font-weight: 800;
   color: #a22e6a;
   background: radial-gradient(circle at 24% 18%, #ffe8f4 0, #ffc8e4 58%, #f8a5cf 100%);
@@ -199,16 +204,16 @@ a { color: inherit; }
 .rank-meta { min-width: 0; }
 .rank-name {
   margin: 0;
-  font-size: 13px;
+  font-size: 16px;
   font-weight: 700;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 .rank-office {
-  margin: 2px 0 0;
+  margin: 4px 0 0;
   color: #6f7487;
-  font-size: 11px;
+  font-size: 12px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -216,7 +221,7 @@ a { color: inherit; }
 .rank-count {
   text-align: right;
   white-space: nowrap;
-  font-size: 12px;
+  font-size: 18px;
   font-weight: 800;
   color: #3f4659;
 }
@@ -377,14 +382,16 @@ a { color: inherit; }
 }
 
 @media (min-width: 721px) {
-  .container { width: min(1180px, 96vw); }
+  .container { width: min(1200px, 96vw); }
   .gnav { display: flex; }
-  .main-content { padding: 14px 0 42px; }
+  .header-inner { min-height: 82px; }
+  .main-content { padding: 16px 0 42px; }
+  .title-page { font-size: 35.2px; margin-bottom: 35.2px; }
 
-  .tab-nav { grid-template-columns: repeat(4, minmax(0, 1fr)); }
-  .tab-item { min-height: 68px; padding: 9px 10px; }
-  .tab-label { font-size: 13px; }
-  .tab-desc { font-size: 11px; }
+  .tab-nav { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
+  .tab-item { min-height: 76px; padding: 10px 12px; }
+  .tab-label { font-size: 14px; }
+  .tab-desc { font-size: 12px; }
 
   .ranking-layout {
     grid-template-columns: minmax(0, 1fr) 238px;
@@ -395,17 +402,21 @@ a { color: inherit; }
     align-items: center;
     justify-content: space-between;
     gap: 10px;
+    padding: 14px 16px;
   }
+  .panel-head .title-ranking { font-size: 28px; }
+  .panel-head .ranking-desc { font-size: 13px; }
   .rank-row {
-    grid-template-columns: 44px 56px minmax(0, 1fr) 88px;
-    gap: 10px;
-    padding: 8px 12px;
+    grid-template-columns: 44px 64px minmax(0, 1fr) 96px;
+    gap: 12px;
+    padding: 14px 16px;
+    min-height: 96px;
   }
-  .rank-no { width: 30px; height: 30px; font-size: 12px; }
-  .rank-avatar { width: 46px; height: 46px; font-size: 12px; }
-  .rank-name { font-size: 14px; }
+  .rank-no { width: 32px; height: 32px; font-size: 13px; }
+  .rank-avatar { width: 52px; height: 52px; font-size: 13px; }
+  .rank-name { font-size: 16px; }
   .rank-office { font-size: 12px; }
-  .rank-count { font-size: 13px; }
+  .rank-count { font-size: 18px; }
   .side-stack { display: grid; gap: 10px; }
 
   .ad-card {
@@ -434,9 +445,10 @@ a { color: inherit; }
 }
 
 @media (max-width: 380px) {
-  .title-page { font-size: 1.32rem; }
-  .rank-row { grid-template-columns: 30px 38px minmax(0, 1fr) auto; gap: 6px; padding: 8px 8px; }
-  .rank-avatar { width: 36px; height: 36px; }
-  .rank-name { font-size: 12px; }
-  .rank-office, .rank-count { font-size: 10px; }
+  .title-page { font-size: 25.6px; }
+  .rank-row { grid-template-columns: 34px 50px minmax(0, 1fr) auto; gap: 8px; padding: 11px 10px; min-height: 88px; }
+  .rank-avatar { width: 44px; height: 44px; }
+  .rank-name { font-size: 16px; }
+  .rank-office { font-size: 11px; }
+  .rank-count { font-size: 18px; }
 }
