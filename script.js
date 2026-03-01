@@ -1,6 +1,10 @@
 const res = await fetch('./data.json');
 const data = await res.json();
 
+const rankingType = document.body.dataset.rankingType;
+const validTypes = ['like', 'live', 'pv'];
+const currentType = validTypes.includes(rankingType) ? rankingType : 'like';
+
 const formatCount = (value, type) => {
   if (type === 'pv') return `+${value}%`;
   return value.toLocaleString('ja-JP');
@@ -26,65 +30,8 @@ const renderCard = (item, index, type) => {
   `;
 };
 
-for (const [type, items] of Object.entries(data)) {
-  const grid = document.querySelector(`[data-grid="${type}"]`);
-  if (!grid) continue;
-  grid.innerHTML = items.map((item, index) => renderCard(item, index, type)).join('');
+const grid = document.querySelector(`[data-grid="${currentType}"]`);
+if (grid) {
+  const items = data[currentType] ?? [];
+  grid.innerHTML = items.map((item, index) => renderCard(item, index, currentType)).join('');
 }
-
-const sectionIds = ['like', 'live', 'pv'];
-const tabs = [...document.querySelectorAll('.anchor-tab')];
-const setActiveTab = (id) => {
-  tabs.forEach((tab) => tab.classList.toggle('is-active', tab.dataset.target === id));
-};
-
-tabs.forEach((tab) => {
-  tab.addEventListener('click', (e) => {
-    const target = tab.dataset.target;
-    const el = document.getElementById(target);
-    if (!el) return;
-
-    e.preventDefault();
-    history.replaceState(null, '', `#${target}`);
-    el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    setActiveTab(target);
-  });
-});
-
-const observer = new IntersectionObserver(
-  (entries) => {
-    const visible = entries.find((entry) => entry.isIntersecting);
-    if (!visible) return;
-    const id = visible.target.id;
-    if (!sectionIds.includes(id)) return;
-    setActiveTab(id);
-  },
-  { rootMargin: '-30% 0px -55% 0px', threshold: 0.01 }
-);
-
-sectionIds.forEach((id) => {
-  const sec = document.getElementById(id);
-  if (sec) observer.observe(sec);
-});
-
-const initialHash = location.hash.replace('#', '');
-if (sectionIds.includes(initialHash)) {
-  const target = document.getElementById(initialHash);
-  if (target) {
-    setTimeout(() => {
-      target.scrollIntoView({ behavior: 'auto', block: 'start' });
-      setActiveTab(initialHash);
-    }, 0);
-  }
-} else {
-  setActiveTab('like');
-}
-
-window.addEventListener('hashchange', () => {
-  const id = location.hash.replace('#', '');
-  if (!sectionIds.includes(id)) return;
-  const target = document.getElementById(id);
-  if (!target) return;
-  target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  setActiveTab(id);
-});

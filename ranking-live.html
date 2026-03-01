@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ユーザーランキング | AVtuberランキング clone</title>
+    <title>同接ランキング | AVtuberランキング clone</title>
     <meta
       name="description"
-      content="AVtuberランキングのユーザーランキングページ。人気・同接・急上昇をページ遷移で確認できます。"
+      content="AVtuberランキングの同接ランキングページ。ランキング種別はページ遷移で切り替えます。"
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -16,7 +16,7 @@
     />
     <link rel="stylesheet" href="./styles.css" />
   </head>
-  <body data-ranking-type="like">
+  <body data-ranking-type="live">
     <div class="app-shell">
       <header class="header">
         <div class="header-inner container">
@@ -31,23 +31,23 @@
       </header>
 
       <main class="container main-content">
-        <div class="breadcrumbs">TOP &gt; ランキング &gt; ユーザーランキング</div>
+        <div class="breadcrumbs">TOP &gt; ランキング &gt; 同接ランキング</div>
         <section class="first-view box-white">
           <h1 class="title-page"><span class="t-pink">AV</span>tuberランキング</h1>
           <p class="lead">人気・同接・急上昇の3軸で、いま勢いのある配信者をチェック。</p>
 
           <section class="anchor-tabs" aria-label="ランキング種別タブ">
-            <a class="anchor-tab is-active" href="./index.html">💗 ユーザーランキング</a>
-            <a class="anchor-tab" href="./ranking-live.html">👁️ 同接ランキング</a>
+            <a class="anchor-tab" href="./index.html">💗 ユーザーランキング</a>
+            <a class="anchor-tab is-active" href="./ranking-live.html">👁️ 同接ランキング</a>
             <a class="anchor-tab" href="./ranking-pv.html">🔥 急上昇ランキング</a>
           </section>
         </section>
 
         <div class="ranking-main">
           <section class="box-white ranking-section">
-            <h2 class="title-ranking">💗 ユーザーランキング</h2>
-            <p class="ranking-desc">当日含む週間のいいね数</p>
-            <div class="cards-grid" data-grid="like"></div>
+            <h2 class="title-ranking">👁️ 同接ランキング (R18)</h2>
+            <p class="ranking-desc">当日含む週間の平均同接数</p>
+            <div class="cards-grid" data-grid="live"></div>
           </section>
         </div>
       </main>
