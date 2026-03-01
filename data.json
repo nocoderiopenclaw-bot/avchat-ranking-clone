@@ -1,0 +1,38 @@
+{
+  "like": [
+    { "name": "咲乃もこ", "office": "個人勢", "count": 308 },
+    { "name": "黒羽まよい", "office": "個人勢", "count": 241 },
+    { "name": "星乃シェリ", "office": "個人勢", "count": 217 },
+    { "name": "彩芽あいら", "office": "Melufy", "count": 197 },
+    { "name": "水城るる", "office": "ぬれきゅーと", "count": 184 },
+    { "name": "雪見つむぎ", "office": "個人勢", "count": 182 },
+    { "name": "深夜みかん", "office": "Melufy", "count": 182 },
+    { "name": "雨宮ノア", "office": "ポータルプロ", "count": 178 },
+    { "name": "柊レイ", "office": "個人勢", "count": 177 },
+    { "name": "椿ねね", "office": "個人勢", "count": 173 }
+  ],
+  "live": [
+    { "name": "月乃あかり", "office": "個人勢", "count": 1260 },
+    { "name": "はもゆり まお", "office": "はもゆり", "count": 1125 },
+    { "name": "PROMISU ルナ", "office": "PROMISU", "count": 987 },
+    { "name": "神崎いお", "office": "個人勢", "count": 852 },
+    { "name": "はもゆり ひな", "office": "はもゆり", "count": 811 },
+    { "name": "蒼井ミミ", "office": "個人勢", "count": 777 },
+    { "name": "桜庭リコ", "office": "個人勢", "count": 699 },
+    { "name": "白城みう", "office": "みのりプロダクション", "count": 681 },
+    { "name": "桃瀬ユキ", "office": "個人勢", "count": 652 },
+    { "name": "楓ほのか", "office": "ムネアツ", "count": 631 }
+  ],
+  "pv": [
+    { "name": "神楽みあ", "office": "個人勢", "count": 342 },
+    { "name": "天音かこ", "office": "DeepHolic", "count": 319 },
+    { "name": "兎月るな", "office": "個人勢", "count": 286 },
+    { "name": "星崎みる", "office": "PROMISU", "count": 263 },
+    { "name": "猫乃いちか", "office": "個人勢", "count": 251 },
+    { "name": "逢坂みずき", "office": "たまぷろじぇくと", "count": 232 },
+    { "name": "藤宮ここな", "office": "ぴゅあえんじぇる", "count": 220 },
+    { "name": "綾瀬ゆの", "office": "個人勢", "count": 211 },
+    { "name": "白雪みお", "office": "個人勢", "count": 198 },
+    { "name": "神代つばき", "office": "ハーフトーンドット", "count": 191 }
+  ]
+}
