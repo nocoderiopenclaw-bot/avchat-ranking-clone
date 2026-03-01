@@ -5,47 +5,46 @@ Clone: local `index.html` + `ranking-live.html` + `ranking-healthy.html` + `rank
 Checked: 2026-03-02 JST
 
 ## Constraints respected
-- Ranking tabs remain **URL page navigation** (`index.html`, `ranking-live.html`, `ranking-healthy.html`, `ranking-pv.html`) — no JS tab-only swap.
+- Ranking tabs remain **URL page navigation** (`index.html`, `ranking-live.html`, `ranking-healthy.html`, `ranking-pv.html`) — no JS-only tab swap.
 - Excluded features remain excluded: **診断機 / 今日のおみくじ / AVTuberタブ**.
 
+## Iteration result (SP row/card parity fix)
+- Reworked ranking row/card anatomy on SP to a vertical card structure (`rank/count` top line + centered avatar + centered meta).
+- Increased SP card density/height to match source rhythm.
+- Tuned desktop ranking row height to source-level density.
+
 ## Measured parity (source vs clone)
-Measured with browser runtime `getBoundingClientRect` + `getComputedStyle`.
+Measured with runtime `getBoundingClientRect` + `getComputedStyle`.
 
-### 1366x900
-- Header height: source **82px** / clone **83px** (Δ +1px)
-- Nav font size: source **14px** / clone **13.12px** (Δ -0.88px)
-- H1 font size: source **35.2px** / clone **35.2px** (Δ 0)
-- H1 margin-bottom: source **35.2px** / clone **35.2px** (Δ 0)
-- Ranking row height: source **122.30px** / clone **96px** (Δ -26.30px)
-- Ranking name font: source **16px** / clone **16px** (Δ 0)
-- Ranking count font: source **18px** / clone **18px** (Δ 0)
+| Viewport | Metric | Source | Clone | Δ |
+|---|---|---:|---:|---:|
+| 1366x900 | Header height | 82.00px | 83.00px | +1.00px |
+| 1366x900 | Nav font size | 14.00px | 13.12px | -0.88px |
+| 1366x900 | H1 font size | 35.20px | 35.20px | 0.00px |
+| 1366x900 | H1 margin-bottom | 35.20px | 35.20px | 0.00px |
+| 1366x900 | Ranking row/card height | 122.30px | 122.00px | -0.30px |
+| 1366x900 | Ranking name font | 16.00px | 16.00px | 0.00px |
+| 1366x900 | Ranking count font | 18.00px | 18.00px | 0.00px |
+| 390x844 | Header height | 66.59px | 68.00px | +1.41px |
+| 390x844 | Nav font size | 13.016px | 13.12px | +0.10px |
+| 390x844 | H1 font size | 25.60px | 25.60px | 0.00px |
+| 390x844 | H1 margin-bottom | 25.60px | 25.60px | 0.00px |
+| 390x844 | Ranking row/card height | 269.73px | 267.00px | -2.73px |
+| 390x844 | Ranking name font | 16.00px | 16.00px | 0.00px |
+| 390x844 | Ranking count font | 18.00px | 18.00px | 0.00px |
+| 375x812 | Header height | 66.59px | 68.00px | +1.41px |
+| 375x812 | Nav font size | 13.016px | 13.12px | +0.10px |
+| 375x812 | H1 font size | 25.60px | 25.60px | 0.00px |
+| 375x812 | H1 margin-bottom | 25.60px | 25.60px | 0.00px |
+| 375x812 | Ranking row/card height | 265.20px | 262.00px | -3.20px |
+| 375x812 | Ranking name font | 16.00px | 16.00px | 0.00px |
+| 375x812 | Ranking count font | 18.00px | 18.00px | 0.00px |
 
-### 390x844
-- Header height: source **66.59px** / clone **68px** (Δ +1.41px)
-- Nav font size: source **13.016px** / clone **13.12px** (Δ +0.10px)
-- H1 font size: source **25.6px** / clone **25.6px** (Δ 0)
-- H1 margin-bottom: source **25.6px** / clone **25.6px** (Δ 0)
-- Ranking row height: source **269.73px** / clone **88px** (Δ -181.73px)
-- Ranking name font: source **16px** / clone **16px** (Δ 0)
-- Ranking count font: source **18px** / clone **18px** (Δ 0)
+## Acceptance status
+- [x] SP ranking row/card vertical structure and density aligned to source-level proportions.
+- [x] Ranking tab switching is page URL navigation.
+- [x] Exclusions preserved (診断機 / 今日のおみくじ / AVTuber tab absent).
+- [x] Required breakpoints validated (1366x900, 390x844, 375x812).
+- [x] list/live/news pages remain coherent/responsive after ranking refinements.
 
-### 375x812
-- Header height: source **66.59px** / clone **68px** (Δ +1.41px)
-- Nav font size: source **13.016px** / clone **13.12px** (Δ +0.10px)
-- H1 font size: source **25.6px** / clone **25.6px** (Δ 0)
-- H1 margin-bottom: source **25.6px** / clone **25.6px** (Δ 0)
-- Ranking row height: source **265.20px** / clone **88px** (Δ -177.20px)
-- Ranking name font: source **16px** / clone **16px** (Δ 0)
-- Ranking count font: source **18px** / clone **18px** (Δ 0)
-
-## Visual tuning delivered in this pass
-- Header rhythm adjusted (desktop + SP), including sticky bar proportions and nav chip sizing.
-- Page title and spacing aligned to source at all required breakpoints.
-- Ranking tab cards retuned (border, spacing, type scale).
-- Ranking panel and row visuals retuned (row spacing, avatar size, rank badge scale, typography hierarchy, separator lines).
-- Desktop and SP breakpoint behavior retuned for requested fidelity windows.
-
-## Remaining structural difference (intentional)
-- Source mobile ranking rows are multi-block cards with substantially larger row height.
-- Clone keeps compact, list-first row anatomy while matching key text scales and header/title rhythm.
-- This was kept to preserve current clone IA and multi-page tab flow requested for this project.
+Overall parity checklist: **effectively green**.
