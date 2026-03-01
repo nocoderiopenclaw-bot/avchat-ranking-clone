@@ -71,19 +71,28 @@ body {
 }
 
 .main-content {
-  padding: 24px 0 80px;
+  padding: 16px 0 80px;
 }
 
 .breadcrumbs {
   font-size: 13px;
   color: #7b8395;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
+}
+
+.first-view {
+  margin-bottom: 18px;
 }
 
 .title-page {
-  margin: 0 0 16px;
+  margin: 0;
   font-size: clamp(1.75rem, 2.8vw, 2.4rem);
   letter-spacing: 0.01em;
+}
+
+.lead {
+  margin: 8px 0 14px;
+  color: var(--muted);
 }
 
 .t-pink {
@@ -95,7 +104,7 @@ body {
   gap: 10px;
   overflow-x: auto;
   padding-bottom: 8px;
-  margin: 0 0 22px;
+  margin: 0;
 }
 
 .anchor-tab {
@@ -108,6 +117,7 @@ body {
   font-weight: 700;
   cursor: pointer;
   white-space: nowrap;
+  text-decoration: none;
 }
 
 .anchor-tab.is-active {
@@ -119,7 +129,7 @@ body {
 
 .ranking-main {
   display: grid;
-  gap: 20px;
+  gap: 16px;
 }
 
 .box-white {
@@ -128,6 +138,10 @@ body {
   border-radius: var(--radius);
   box-shadow: var(--shadow);
   padding: 18px;
+}
+
+.ranking-section {
+  scroll-margin-top: 94px;
 }
 
 .title-ranking {
@@ -220,6 +234,10 @@ body {
   font-size: 13px;
 }
 
+.simple-page {
+  min-height: 55vh;
+}
+
 @media (max-width: 720px) {
   .gnav {
     display: none;
@@ -227,5 +245,9 @@ body {
 
   .cards-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .main-content {
+    padding-top: 10px;
   }
 }

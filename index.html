@@ -20,24 +20,27 @@
     <div class="app-shell">
       <header class="header">
         <div class="header-inner container">
-          <a class="logo" href="#" aria-label="ランキングトップ">えぶメディ clone</a>
+          <a class="logo" href="./index.html" aria-label="ランキングトップ">えぶメディ clone</a>
           <nav class="gnav" aria-label="グローバルナビゲーション">
-            <a class="nav-link active" href="#">ランキング</a>
-            <a class="nav-link" href="#">一覧</a>
-            <a class="nav-link" href="#">配信中</a>
-            <a class="nav-link" href="#">お知らせ</a>
+            <a class="nav-link active" href="./index.html">ランキング</a>
+            <a class="nav-link" href="./list.html">一覧</a>
+            <a class="nav-link" href="./live.html">配信中</a>
+            <a class="nav-link" href="./news.html">お知らせ</a>
           </nav>
         </div>
       </header>
 
       <main class="container main-content">
         <div class="breadcrumbs">TOP &gt; ランキング</div>
-        <h1 class="title-page"><span class="t-pink">AV</span>tuberランキング</h1>
+        <section class="first-view box-white">
+          <h1 class="title-page"><span class="t-pink">AV</span>tuberランキング</h1>
+          <p class="lead">人気・同接・急上昇の3軸で、いま勢いのある配信者をチェック。</p>
 
-        <section class="anchor-tabs" aria-label="ランキング種別タブ">
-          <button class="anchor-tab is-active" data-target="like">💗 ユーザーランキング</button>
-          <button class="anchor-tab" data-target="live">👁️ 同接ランキング</button>
-          <button class="anchor-tab" data-target="pv">🔥 急上昇ランキング</button>
+          <section class="anchor-tabs" aria-label="ランキング種別タブ">
+            <a class="anchor-tab is-active" href="#like" data-target="like">💗 ユーザーランキング</a>
+            <a class="anchor-tab" href="#live" data-target="live">👁️ 同接ランキング</a>
+            <a class="anchor-tab" href="#pv" data-target="pv">🔥 急上昇ランキング</a>
+          </section>
         </section>
 
         <div class="ranking-main">

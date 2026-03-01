@@ -9,8 +9,7 @@ const formatCount = (value, type) => {
 const renderCard = (item, index, type) => {
   const rank = index + 1;
   const top3 = rank <= 3 ? 'top3' : '';
-  const metricLabel =
-    type === 'like' ? '♥' : type === 'live' ? '同接' : '伸び率';
+  const metricLabel = type === 'like' ? '♥' : type === 'live' ? '同接' : '伸び率';
 
   return `
     <article class="ranking-card" aria-label="${rank}位 ${item.name}">
@@ -34,31 +33,58 @@ for (const [type, items] of Object.entries(data)) {
 }
 
 const sectionIds = ['like', 'live', 'pv'];
-const tabs = document.querySelectorAll('.anchor-tab');
+const tabs = [...document.querySelectorAll('.anchor-tab')];
+const setActiveTab = (id) => {
+  tabs.forEach((tab) => tab.classList.toggle('is-active', tab.dataset.target === id));
+};
 
 tabs.forEach((tab) => {
-  tab.addEventListener('click', () => {
+  tab.addEventListener('click', (e) => {
     const target = tab.dataset.target;
-    document.getElementById(target)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    const el = document.getElementById(target);
+    if (!el) return;
 
-    tabs.forEach((t) => t.classList.remove('is-active'));
-    tab.classList.add('is-active');
+    e.preventDefault();
+    history.replaceState(null, '', `#${target}`);
+    el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    setActiveTab(target);
   });
 });
 
 const observer = new IntersectionObserver(
   (entries) => {
-    entries.forEach((entry) => {
-      if (!entry.isIntersecting) return;
-      const id = entry.target.id;
-      if (!sectionIds.includes(id)) return;
-      tabs.forEach((tab) => tab.classList.toggle('is-active', tab.dataset.target === id));
-    });
+    const visible = entries.find((entry) => entry.isIntersecting);
+    if (!visible) return;
+    const id = visible.target.id;
+    if (!sectionIds.includes(id)) return;
+    setActiveTab(id);
   },
-  { rootMargin: '-40% 0px -45% 0px' }
+  { rootMargin: '-30% 0px -55% 0px', threshold: 0.01 }
 );
 
 sectionIds.forEach((id) => {
   const sec = document.getElementById(id);
   if (sec) observer.observe(sec);
+});
+
+const initialHash = location.hash.replace('#', '');
+if (sectionIds.includes(initialHash)) {
+  const target = document.getElementById(initialHash);
+  if (target) {
+    setTimeout(() => {
+      target.scrollIntoView({ behavior: 'auto', block: 'start' });
+      setActiveTab(initialHash);
+    }, 0);
+  }
+} else {
+  setActiveTab('like');
+}
+
+window.addEventListener('hashchange', () => {
+  const id = location.hash.replace('#', '');
+  if (!sectionIds.includes(id)) return;
+  const target = document.getElementById(id);
+  if (!target) return;
+  target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  setActiveTab(id);
 });
